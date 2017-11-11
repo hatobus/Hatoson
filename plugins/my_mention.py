@@ -27,7 +27,7 @@ def return_weather(message, place):
     metric = "Metric"
     lat = place_list[0]
     lon = place_list[1]
-    appid = "5fb5f99cc6ba9c2fd51cc5f8d7cbc6a0"
+    appid = "APPTOKEN"
     url = "http://api.openweathermap.org/data/2.5/weather?lat={a}&lon={b}&units={c}&appid={d}".format(a=lat, b=lon, c=metric, d=appid)
     response = urllib.request.urlopen(url).readline()
     weather = json.loads(response.decode('utf-8'))

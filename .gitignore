@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ### https://raw.github.com/github/gitignore/9139ad597b05354da689b19ce805c389252a6b8b/Python.gitignore
 
+=======
+>>>>>>> 00b150239806428729aec2fd9466826139e60cb3
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -104,5 +107,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 00b150239806428729aec2fd9466826139e60cb3

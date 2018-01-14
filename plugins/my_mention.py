@@ -5,6 +5,16 @@ from datetime import datetime
 from pygeocoder import Geocoder
 import urllib.request
 import json
+import os
+from dotenv import load_dotenv, find_dotenv
+
+dotenv_path = find_dotenv()
+
+ # load up the entries as environment variables
+load_dotenv(dotenv_path)
+
+token = os.environ.get("OPEN_WEATHER_MAP")
+
 
 @respond_to('時間')
 def mention_func(message):
@@ -27,7 +37,7 @@ def return_weather(message, place):
     metric = "Metric"
     lat = place_list[0]
     lon = place_list[1]
-    appid = "APPTOKEN"
+    appid = token
     url = "http://api.openweathermap.org/data/2.5/weather?lat={a}&lon={b}&units={c}&appid={d}".format(a=lat, b=lon, c=metric, d=appid)
     response = urllib.request.urlopen(url).readline()
     weather = json.loads(response.decode('utf-8'))
